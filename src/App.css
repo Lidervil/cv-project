@@ -1,38 +1,259 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: lightgreen;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width: 38vw;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-section, .right-section {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.left-section {
+  gap: 3em;
+  width: 13vw;
+  background-color: #ccc;
+}
+
+.right-section {
+  width: 25vw;
+  background-color: #fff;
+  box-shadow: #ccc 10px 0px 10px 5px;
+  gap: 2em;
+}
+
+.pfp {
+  width: 10vw;
+  height: 9.5vw;
+  padding: 2vw 0vw;
+  border-radius: 50%;
+}
+
+.GeneralInformation div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.GeneralInformation p {
+  font-size: 1em;
+  font-family: helvetica;
+}
+
+.GeneralInformation .fullName {
+  font-size: 1.5em;
+}
+
+.GeneralInformation input {
+  width: 10vw;
+  height: 15px;
+  margin: 2.35px;
+  border-radius: 5px;
+  outline: solid 1px #888;
+}
+
+.title {
+  border-bottom: solid 2px #000;
+}
+
+.GeneralInformation .bold {
+  font-weight: 600;
+}
+
+.Skills {
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.skilltitle {
+  font-weight: 600;
+  font-size: 2em;
+  border-bottom: solid 2px #000;
+}
+
+.linkedin {
+  border-bottom: solid 2px #000;
+}
+
+.top-right-space {
+  width: 25vw;
+  height: 30vh;
+  background-color: #ffc8c8;
+}
+
+.Description, .EducationalExperience, .practical-experience {
+  width: 20vw;
+}
+
+.desc-title, .educ-title, .pract-title {
+  font-weight: 600;
+  border-bottom: solid 2px #000;
+}
+
+.name-and-year {
+  display: flex;
+  justify-content: space-between;
+}
+
+.school-mod, .job-mod {
+  border-bottom: solid 1px #ccc;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.pfp-url {
+  position: absolute;
+  top: 13%;
+}
+
+.Description textarea {
+  padding: 5px;
+  outline: 1px solid #888;
+  resize: none;
+}
+
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Helvetica",monospace;
+  height: 48px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: absolute;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.infoButton {
+  left: 28%;
+  top: 25%
+}
+
+.skillButton {
+  left: 28%;
+  top: 70%;
+}
+
+.descButton {
+  top: 40%;
+  right:28%;
+}
+
+.educButton {
+  top: 50%;
+  right:28%;
+}
+
+.practButton {
+  top: 70%;
+  right:28%;
+}
+
+.infoButton, .skillButton, .educButton, .descButton, .practButton {
+  display: none;
+}
+
+.left-section:hover .infoButton, .left-section:hover .skillButton {
+  display: inline-flex;
+}
+
+.right-section:hover .descButton, .right-section:hover .educButton, .right-section:hover .practButton {
+  display: inline-flex;
+}
+
+.addSkill, .deleteSkill {
+  position: absolute;
+  top: 80%;
+  left: 28%;
+}
+
+.deleteSkill {
+  top: 85%
+}
+
+.addSchool, .deleteSchool {
+  right: 28.5%;
+  top: 56%;
+}
+
+.deleteSchool {
+  top: 61%;
+}
+
+.addPract, .deletePract {
+  right: 28.5%;
+  top: 80%;
+}
+
+.deletePract {
+  top: 85%;
+}
+
+.pract-name, .pract-year-start, .pract-year-end, input.job-mod {
+  height: 2em;
+} 
+
+.pract-year-start, .pract-year-end {
+  width: 64px;
+}
+
+.pract-name, input.job-mod {
+  width: 18em;
 }
